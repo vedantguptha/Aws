@@ -1,0 +1,10 @@
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+mkdir /var/www/html/app1
+echo "<h1Getting Response form App-1 $(hostname -f)</h1>" > /var/www/html/app1/index.html
